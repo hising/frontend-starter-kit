@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --progress --colors --hot --config webpack.config.js",
     "build": "webpack --mode=production",
-    "prettier": ""
+    "prettier": "prettier-check src/**/*.*"
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,7 @@
     "babel-loader": "^8.0.5",
     "html-webpack-plugin": "^3.2.0",
     "prettier": "^1.16.2",
+    "prettier-check": "^2.0.0",
     "ts-loader": "^5.3.3",
     "typescript": "^3.2.4",
     "webpack": "^4.29.0",
