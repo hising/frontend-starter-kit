@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "",
-    "build": "",
+    "dev": "webpack-dev-server --progress --colors --hot --config webpack.config.js",
+    "build": "webpack --mode=production",
     "prettier": ""
   },
   "repository": {
@@ -21,6 +21,8 @@
   "dependencies": {
     "@types/react": "^16.7.22",
     "@types/react-dom": "^16.0.11",
+    "mobx": "^5.9.0",
+    "mobx-react": "^5.4.3",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
   },
@@ -28,6 +30,7 @@
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
     "babel-loader": "^8.0.5",
+    "html-webpack-plugin": "^3.2.0",
     "prettier": "^1.16.2",
     "ts-loader": "^5.3.3",
     "typescript": "^3.2.4",
