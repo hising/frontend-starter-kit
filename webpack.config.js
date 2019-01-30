@@ -11,7 +11,7 @@ const config = {
         extensions: ['.ts', '.tsx', '.js', '.jsx']
     },
     module: {
-        rules: [{test: /\.tsx?$/, loader: 'ts-loader'}]
+        rules: [{test: /\.tsx?$/, loader: 'babel-loader'}]
     },
     plugins: [
         new HtmlWebpackPlugin({
