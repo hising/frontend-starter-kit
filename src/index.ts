@@ -1,9 +1,9 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import {App} from './App';
 
-const elementType = "div";
 const appRoot = document.getElementById("root");
 
 if (appRoot) {
-    ReactDOM.render(React.createElement(elementType), appRoot);
+    ReactDOM.render(React.createElement(App), appRoot);
 }
