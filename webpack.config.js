@@ -11,7 +11,23 @@ const config = {
         extensions: [".ts", ".tsx", ".js", ".jsx"]
     },
     module: {
-        rules: [{test: /\.tsx?$/, loader: "babel-loader"}]
+        rules: [
+            {test: /\.tsx?$/, loader: "babel-loader"},
+            {
+                test: /\.s?css$/,
+                use: [
+                    {
+                        loader: "style-loader" // creates style nodes from JS strings
+                    },
+                    {
+                        loader: "css-loader" // translates CSS into CommonJS
+                    },
+                    {
+                        loader: "sass-loader" // compiles Sass to CSS
+                    }
+                ]
+            }
+        ]
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -37,7 +53,7 @@ module.exports = (env, argv) => {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             },
-            contentBase: path.join(__dirname, 'dist'),
+            contentBase: path.join(__dirname, "dist"),
             compress: true
         };
     }
