@@ -1,0 +1,38 @@
+{
+  "name": "frontend-starter-kit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "",
+    "build": "",
+    "prettier": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hising/frontend-starter-kit.git"
+  },
+  "author": "Mattias Hising <mattias@yetric.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hising/frontend-starter-kit/issues"
+  },
+  "homepage": "https://github.com/hising/frontend-starter-kit#readme",
+  "dependencies": {
+    "@types/react": "^16.7.22",
+    "@types/react-dom": "^16.0.11",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "babel-loader": "^8.0.5",
+    "prettier": "^1.16.2",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.2.4",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
+  }
+}
