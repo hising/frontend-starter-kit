@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 const webpackDevServerPort = 3000;
 
@@ -12,21 +13,7 @@ const config = {
     },
     module: {
         rules: [
-            {test: /\.tsx?$/, loader: "babel-loader"},
-            {
-                test: /\.s?css$/,
-                use: [
-                    {
-                        loader: "style-loader" // creates style nodes from JS strings
-                    },
-                    {
-                        loader: "css-loader" // translates CSS into CommonJS
-                    },
-                    {
-                        loader: "sass-loader" // compiles Sass to CSS
-                    }
-                ]
-            }
+            {test: /\.tsx?$/, loader: "babel-loader"}
         ]
     },
     plugins: [
@@ -37,8 +24,9 @@ const config = {
 };
 
 module.exports = (env, argv) => {
+    const devMode = argv.mode === "development";
     config.entry =
-        argv.mode === "development"
+        devMode
             ? [
                   `webpack-dev-server/client?http://localhost:${webpackDevServerPort}`,
                   "webpack/hot/only-dev-server",
@@ -46,7 +34,7 @@ module.exports = (env, argv) => {
               ]
             : ["./src/index.ts"];
 
-    if (argv.mode === "development") {
+    if (devMode) {
         config.devServer = {
             port: webpackDevServerPort,
             hot: true,
@@ -57,5 +45,25 @@ module.exports = (env, argv) => {
             compress: true
         };
     }
+
+    config.plugins.push(
+        new MiniCssExtractPlugin({
+            filename: devMode ? "[name].css" : "[name].[hash].css",
+            chunkFilename: devMode ? "[id].css" : "[id].[hash].css"
+        })
+    );
+
+    config.module.rules.push(
+        {
+            test: /\.s?css$/,
+            use: [
+                devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+                "css-loader",
+                "sass-loader"
+            ]
+        }
+    );
+
+
     return config;
 };
