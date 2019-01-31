@@ -1,0 +1,29 @@
+{
+    "items": [
+        {
+            "label": "Home",
+            "path": "/",
+            "icon": "home"
+        },
+        {
+            "label": "Signup",
+            "path": "/signup",
+            "icon": "user"
+        },
+        {
+            "label": "Login",
+            "path": "/login",
+            "icon": "lock"
+        },
+        {
+            "label": "Account",
+            "path": "/account",
+            "icon": "user"
+        },
+        {
+            "label": "Settings",
+            "path": "/settings",
+            "icon": "setting"
+        }
+    ]
+}

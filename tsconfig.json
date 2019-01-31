@@ -11,7 +11,8 @@
     "target": "esnext",
     "jsx": "react",
     "esModuleInterop": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "resolveJsonModule": true
   },
   "include": [
     "./src/**/*"
