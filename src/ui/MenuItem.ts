@@ -1,5 +1,4 @@
 export class MenuItem {
-
     private _path: string;
     private _label: string;
     private _icon: string;
@@ -31,5 +30,4 @@ export class MenuItem {
     set path(value: string) {
         this._path = value;
     }
-
 }

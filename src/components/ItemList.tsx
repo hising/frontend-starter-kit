@@ -1,10 +1,10 @@
 import * as React from "react";
 import {observer} from "mobx-react";
-import {Item, ItemStore} from '../stores/ItemStore';
+import {Item, ItemStore} from "../stores/ItemStore";
 import {List} from "antd";
 
 interface IItemListInterface {
-    store: ItemStore
+    store: ItemStore;
 }
 
 @observer

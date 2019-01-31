@@ -3,9 +3,9 @@ import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import {Account, ForgotPassword, Home, Login, Settings, Signup} from "./views";
 import {hot} from "react-hot-loader/root";
 import "antd/dist/antd.css";
-import {AppLayout} from './components/AppLayout';
-import * as menuConfig from './config/menu.json';
-import {MenuItem} from './ui/MenuItem';
+import {AppLayout} from "./components/AppLayout";
+import * as menuConfig from "./config/menu.json";
+import {MenuItem} from "./ui/MenuItem";
 const menuItems = menuConfig.items.map((item: any) => {
     return new MenuItem(item.path, item.label, item.icon);
 });
@@ -26,7 +26,11 @@ class App extends React.Component<IAppProps, IAppState> {
                     <Route path="/account" exact component={Account} />
                     <Route path="/signup" exact component={Signup} />
                     <Route path="/login" exact component={Login} />
-                    <Route path="/forgot-pwd" exact component={ForgotPassword} />
+                    <Route
+                        path="/forgot-pwd"
+                        exact
+                        component={ForgotPassword}
+                    />
                     <Route path="/settings" exact component={Settings} />
                 </AppLayout>
             </Router>
