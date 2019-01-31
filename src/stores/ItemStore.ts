@@ -7,7 +7,7 @@ export interface Item {
     url: string
 }
 
-class ItemStore {
+export class ItemStore {
     @observable items: Item[] = [];
     private client: HttpClient;
 
