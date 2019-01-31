@@ -14,11 +14,11 @@ export class HttpClient {
         return this.baseURL + path;
     }
 
-    public async get(path: string, params: any = {}) {
-        return await this.transport.get(this.getUrl(path));
+    public get(path: string, params: any = {}) {
+        return this.transport.get(this.getUrl(path));
     }
 
-    public async post(path: string, params: any = {}, headers: any = {}) {
-        return await this.transport.post(this.getUrl(path), params);
+    public post(path: string, params: any = {}, headers: any = {}) {
+        return this.transport.post(this.getUrl(path), params);
     }
 }

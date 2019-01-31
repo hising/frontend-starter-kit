@@ -1,9 +1,10 @@
 import {action, computed, observable} from 'mobx';
 import {HttpClient} from '../http/client';
 
-interface Item {
+export interface Item {
     name: string,
-    clicked: boolean
+    clicked: boolean,
+    url: string
 }
 
 class ItemStore {
@@ -16,7 +17,18 @@ class ItemStore {
     }
 
     getItems() {
-        const items = this.client.get('https://api.github.com/users/hising/gists');
+        this.client.get('https://api.github.com/users/hising/gists').then((response: any) => {
+            let {
+                data
+            } = response;
+            this.items = data.map((gist: any) => {
+                return {
+                    name: gist.id,
+                    clicked: false,
+                    url: gist.html_url
+                }
+            });
+        });
     }
 
     @computed
