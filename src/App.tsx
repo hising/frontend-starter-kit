@@ -19,7 +19,7 @@ class App extends React.Component<IAppProps, IAppState> {
             <Router>
                 <Layout style={{minHeight: "100vh"}}>
                     <Sider collapsible>
-                        <Menu>
+                        <Menu theme="dark">
                             <Menu.Item key="1">
                                 <Link to="/">
                                     <Icon type="home" />
