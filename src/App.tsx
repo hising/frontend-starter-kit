@@ -51,7 +51,7 @@ class App extends React.Component<IAppProps, IAppState> {
                                     <span>Forgot Password</span>
                                 </Link>
                             </Menu.Item>
-                            <Menu.Item key="5">
+                            <Menu.Item key="6">
                                 <Link to="/settings">
                                     <Icon type="setting" />
                                     <span>Settings</span>
