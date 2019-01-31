@@ -1,4 +1,5 @@
 import {action, computed, observable} from 'mobx';
+import {HttpClient} from '../http/client';
 
 interface Item {
     name: string,
@@ -7,9 +8,15 @@ interface Item {
 
 class ItemStore {
     @observable items: Item[] = [];
+    private client: HttpClient;
 
     constructor() {
+        this.client = new HttpClient;
+        this.getItems();
+    }
 
+    getItems() {
+        const items = this.client.get('https://api.github.com/users/hising/gists');
     }
 
     @computed
