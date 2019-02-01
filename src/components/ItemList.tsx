@@ -31,7 +31,7 @@ class ItemList extends React.Component<IItemListInterface, any> {
                                     </a>
                                 }
                             />
-                            <div>{item.clicked ? "Clicked" : ""}</div>
+                            <div>{item.clicked ? "Visited" : ""}</div>
                         </List.Item>
                     )}
                 />
@@ -42,7 +42,6 @@ class ItemList extends React.Component<IItemListInterface, any> {
     private handleClick(item: Item, event: any) {
         event.preventDefault();
         this.props.store.clickItem(item);
-        //this.props.store.clickItem()
     }
 }
 
