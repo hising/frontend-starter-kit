@@ -5,6 +5,7 @@ import {Link} from "react-router-dom";
 export class Login extends React.Component<any, any> {
     handleSubmit = (e: any) => {
         e.preventDefault();
+        alert("sfsdf");
     };
 
     render() {
@@ -30,7 +31,6 @@ export class Login extends React.Component<any, any> {
                     </Link>
                     <div style={{marginTop: '16px'}}>
                         <Button
-                            type="primary"
                             htmlType="submit"
                             className="login-form-button"
                             style={{marginRight: '12px'}}
