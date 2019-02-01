@@ -11,18 +11,38 @@ interface IItemListInterface {
 class ItemList extends React.Component<IItemListInterface, any> {
     render() {
         return (
-            <List
-                header={<h3>Gists</h3>}
-                footer={<div>Footer</div>}
-                bordered
-                dataSource={this.props.store.items}
-                renderItem={(item: Item) => (
-                    <List.Item>
-                        <a href={item.url}>{item.name}</a>
-                    </List.Item>
-                )}
-            />
+            <div>
+                <h4>Clicked Items: {this.props.store.clickedItems}</h4>
+                <List
+                    header={<h3>Gists</h3>}
+                    footer={<div>Footer</div>}
+                    bordered
+                    dataSource={this.props.store.items}
+                    renderItem={(item: Item) => (
+                        <List.Item>
+                            <List.Item.Meta
+                                title={
+                                    <a
+                                        onClick={(event: any) => {
+                                            this.handleClick(item, event);
+                                        }}
+                                        href={item.url}>
+                                        {item.name}
+                                    </a>
+                                }
+                            />
+                            <div>{item.clicked ? "Clicked" : ""}</div>
+                        </List.Item>
+                    )}
+                />
+            </div>
         );
+    }
+
+    private handleClick(item: Item, event: any) {
+        event.preventDefault();
+        this.props.store.clickItem(item);
+        //this.props.store.clickItem()
     }
 }
 

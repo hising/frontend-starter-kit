@@ -13,10 +13,10 @@ export class ItemStore {
 
     constructor() {
         this.client = new HttpClient();
-        this.getItems();
+        this.grabItems();
     }
 
-    getItems() {
+    public grabItems() {
         this.client
             .get("https://api.github.com/users/hising/gists")
             .then((response: any) => {
