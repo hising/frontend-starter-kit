@@ -29,12 +29,11 @@ export class Login extends React.Component<any, any> {
                     <Link className="login-form-forgot" to="/forgot-pwd">
                         Forgot password
                     </Link>
-                    <div style={{marginTop: '16px'}}>
+                    <div style={{marginTop: "16px"}}>
                         <Button
                             htmlType="submit"
                             className="login-form-button"
-                            style={{marginRight: '12px'}}
-                        >
+                            style={{marginRight: "12px"}}>
                             Log in
                         </Button>
                         Or <Link to="/signup">register now!</Link>
