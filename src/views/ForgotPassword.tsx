@@ -1,6 +1,5 @@
 import * as React from "react";
-import {Button, Checkbox, Form, Icon, Input} from 'antd';
-import {Link} from 'react-router-dom';
+import {Button, Form, Icon, Input} from 'antd';
 
 export class ForgotPassword extends React.Component<any, any> {
     render() {
