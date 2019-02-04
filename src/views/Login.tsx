@@ -5,7 +5,6 @@ import {Link} from "react-router-dom";
 export class Login extends React.Component<any, any> {
     handleSubmit = (e: any) => {
         e.preventDefault();
-        alert("sfsdf");
     };
 
     render() {

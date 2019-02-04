@@ -10,6 +10,9 @@ const menuItems = menuConfig.items.map((item: any) => {
     return new MenuItem(item.path, item.label, item.icon);
 });
 
+import {EventDispatcher} from './core/EventDispatcher';
+const eventDispathcer = new EventDispatcher();
+
 interface IAppProps {}
 interface IAppState {}
 
