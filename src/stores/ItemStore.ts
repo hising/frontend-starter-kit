@@ -8,7 +8,7 @@ export interface Item {
 }
 
 export class ItemStore {
-    @observable items: Item[] = [];
+    @observable public items: Item[] = [];
     private client: HttpClient;
 
     constructor() {
@@ -20,12 +20,12 @@ export class ItemStore {
         this.client
             .get("https://api.github.com/users/hising/gists")
             .then((response: any) => {
-                let {data} = response;
+                const {data} = response;
                 this.items = data.map((gist: any) => {
                     return {
-                        name: gist.id,
                         clicked: false,
-                        url: gist.html_url
+                        name: gist.id,
+                        url: gist.html_url,
                     };
                 });
             });
@@ -33,12 +33,12 @@ export class ItemStore {
 
     @computed
     get clickedItems(): number {
-        return this.items.filter(item => item.clicked).length;
+        return this.items.filter((item: any) => item.clicked).length;
     }
 
     @action
-    clickItem(clickedItem: Item) {
-        const foundItem = this.items.find(item => {
+    public clickItem(clickedItem: Item) {
+        const foundItem = this.items.find((item: any) => {
             return item === clickedItem;
         });
 

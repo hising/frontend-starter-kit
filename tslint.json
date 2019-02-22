@@ -4,7 +4,9 @@
     "tslint:latest"
   ],
   "jsRules": {},
-  "rules": {},
+  "rules": {
+    "variable-name": [true, "ban-keywords", "check-format","allow-leading-underscore"]
+  },
   "rulesDirectory": [],
   "linterOptions": {
     "exclude": ["**/node_modules/**"]
