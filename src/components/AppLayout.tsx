@@ -1,6 +1,6 @@
-import {Link} from "react-router-dom";
-import {Menu, Icon, Layout} from "antd";
+import {Icon, Layout, Menu} from "antd";
 import * as React from "react";
+import {Link} from "react-router-dom";
 import {MenuItem} from "../ui/MenuItem";
 const {Content, Footer, Sider} = Layout;
 
@@ -10,30 +10,20 @@ interface IAppLayoutProps {
 }
 
 export class AppLayout extends React.Component<IAppLayoutProps, any> {
-    render() {
-        let menuIndex = 0;
+    public render() {
         return (
             <Layout style={{minHeight: "100vh"}}>
                 <Sider collapsible>
                     <Menu theme="dark">
-                        {this.props.menuItems.map((menuItem: MenuItem) => {
-                            return (
-                                <Menu.Item key={menuIndex++}>
-                                    <Link to={menuItem.path}>
-                                        <Icon type={menuItem.icon} />
-                                        <span>{menuItem.label}</span>
-                                    </Link>
-                                </Menu.Item>
-                            );
-                        })}
+                        {this.renderMenuItems()}
                     </Menu>
                 </Sider>
                 <Layout>
                     <Content
                         style={{
+                            backgroundColor: "#fff",
                             margin: "0",
                             padding: "16px",
-                            backgroundColor: "#fff"
                         }}>
                         {this.props.children}
                     </Content>
@@ -43,5 +33,19 @@ export class AppLayout extends React.Component<IAppLayoutProps, any> {
                 </Layout>
             </Layout>
         );
+    }
+
+    private renderMenuItems() {
+        let menuIndex = 0;
+        return this.props.menuItems.map((item: MenuItem) => {
+            return (
+                <Menu.Item key={menuIndex++}>
+                    <Link to={item.path}>
+                        <Icon type={item.icon} />
+                        <span>{item.label}</span>
+                    </Link>
+                </Menu.Item>
+            );
+        });
     }
 }

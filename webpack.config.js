@@ -2,6 +2,9 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 const webpackDevServerPort = 3000;
+const webpack = require("webpack");
+const TerserPlugin = require('terser-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const config = {
     output: {
@@ -44,6 +47,62 @@ module.exports = (env, argv) => {
             contentBase: path.join(__dirname, "dist"),
             compress: true
         };
+    } else {
+
+        let pathsToClean = [
+            'dist',
+        ];
+
+        let cleanOptions = {
+            root:     '',
+            exclude:  [],
+            verbose:  true,
+            dry:      false
+        };
+
+        config.plugins.push(
+            new CleanWebpackPlugin(pathsToClean, cleanOptions),
+            new webpack.optimize.ModuleConcatenationPlugin(),
+        );
+        config.optimization = {
+            minimize: !devMode,
+            minimizer: [new TerserPlugin({
+                terserOptions: {
+                    parse: {
+                        ecma: 8,
+                    },
+                    compress: {
+                        ecma: 5,
+                        warnings: false,
+                        comparisons: false
+                    },
+                    mangle: {
+                        safari10: true,
+                    },
+                    output: {
+                        ecma: 5,
+                        comments: false,
+                        ascii_only: true,
+                    },
+                    parallel: true,
+                    cache: true,
+                }
+            })],
+            splitChunks: {
+                chunks: "all",
+                cacheGroups: {
+                    vendors: {
+                        test: /[\\/]node_modules[\\/]/,
+                        priority: -10
+                    },
+                    default: {
+                        minChunks: 2,
+                        priority: -20,
+                        reuseExistingChunk: true
+                    }
+                }
+            }
+        }
     }
 
     config.plugins.push(
