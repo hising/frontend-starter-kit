@@ -43,6 +43,10 @@ App accessible at http://localhost:3000
 * Ant Design
 
 ## TODO
-* Add commit-hooks (Prettier, Jest) with Husky
-* Create base models that hook up CRUD agains REST-API
-* Optimize Bundle Size
+- [ ] Add commit-hooks (Prettier, Jest) with Husky
+- [ ] Create base models that hook up CRUD agains REST-API
+- [ ] Optimize Bundle Size
+
+## Contribute
+
+Clone repo, do your magic, create a Pull Request
