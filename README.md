@@ -11,7 +11,10 @@ git clone https://github.com/hising/frontend-starter-kit.git <project_name>
 ```
 cd <project_name>
 npm install
+npm run dev
 ```
+
+App accessible at http://localhost:3000
 
 ## Tools included
 
@@ -39,6 +42,6 @@ npm install
 * Tslint
 * Ant Design
 
-`npm install`
-
-`npm run dev` opens up dev env on http://localhost:3000 with hot reloading
+## TODO
+* Add commit-hooks (Prettier, Jest) with Husky
+* Create base models that hook up CRUD agains REST-API
