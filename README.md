@@ -1,3 +1,18 @@
+# Opinionated Frontend Starter Kit (TypeScript, Babel, Webpack, React, Mobx, AntD)
+
+## Getting started
+- Clone the repository
+```
+git clone --depth=1 https://github.com/Microsoft/TypeScript-Node-Starter.git <project_name>
+```
+- Install dependencies
+```
+cd <project_name>
+npm install
+```
+
+## Tools included
+
 * Webpack
     * HTML Webpack Plugin
     * Mini CSS Extract Plugin
