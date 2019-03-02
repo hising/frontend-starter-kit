@@ -1,4 +1,6 @@
-# Opinionated Frontend Starter Kit (TypeScript, Babel, Webpack, React, Mobx, AntD)
+# Opinionated Frontend Starter Kit 
+
+__TypeScript, Babel, Webpack, React, Mobx, AntD__
 
 ## Getting started
 - Clone the repository
