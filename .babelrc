@@ -29,7 +29,7 @@
         "react-hot-loader/babel",
         [
             "import",
-            {"libraryName": "antd", "libraryDirectory": "lib", "style": true}
+            {"libraryName": "antd", "libraryDirectory": "lib", "style": "css"}
         ]
     ]
 }
