@@ -16,6 +16,7 @@ const cleanOptions = {
 };
 
 const config = {
+    devtool: "source-map",
     entry: ["./src/index.ts"],
     output: {
         path: path.resolve("dist"),
@@ -29,13 +30,23 @@ const config = {
             {test: /\.tsx?$/, loader: "babel-loader"},
             {
                 test: /\.s?css$/,
-                use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {loader: "css-loader", options: {importLoaders: 1}},
+                    "postcss-loader",
+                    "sass-loader"
+                ]
             }
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: "./src/index.html"
+        }),
+        new webpack.DefinePlugin({
+            "process.env": {
+                NODE_ENV: JSON.stringify("production")
+            }
         }),
         new CleanWebpackPlugin(pathsToClean, cleanOptions),
         new webpack.optimize.ModuleConcatenationPlugin(),
