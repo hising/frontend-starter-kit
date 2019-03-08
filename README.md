@@ -56,6 +56,8 @@ App accessible at http://localhost:3000
 -   [x] Use Fetch instead of Axios
 -   [ ] Check if DevServer port is taken, if so, grab next free
 -   [ ] Add PostCSS loader
+-   [ ] Make Ant Design Optional
+-   [ ] Create a starter script for config
 
 ## Contribute
 
