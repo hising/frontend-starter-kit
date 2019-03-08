@@ -16,19 +16,18 @@ export class ItemStore {
         this.grabItems();
     }
 
-    public grabItems() {
-        this.client
-            .get("https://api.github.com/users/hising/gists")
-            .then((response: any) => {
-                const {data} = response;
-                this.items = data.map((gist: any) => {
-                    return {
-                        clicked: false,
-                        name: gist.id,
-                        url: gist.html_url,
-                    };
-                });
-            });
+    public async grabItems() {
+        const gists = await this.client.get(
+            "https://api.github.com/users/hising/gists"
+        );
+
+        this.items = gists.map((gist: any) => {
+            return {
+                clicked: false,
+                name: gist.id,
+                url: gist.html_url
+            };
+        });
     }
 
     @computed
