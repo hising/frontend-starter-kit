@@ -55,7 +55,7 @@ App accessible at http://localhost:3000
 -   [ ] Create a RootStore that has all other Stores as props
 -   [x] Use Fetch instead of Axios
 -   [ ] Check if DevServer port is taken, if so, grab next free
--   [ ] Add PostCSS loader
+-   [x] Add PostCSS loader
 -   [ ] Make Ant Design Optional
 -   [ ] Create a starter script for config
 -   [ ] Add CircleCI build config
