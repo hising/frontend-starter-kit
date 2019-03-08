@@ -50,14 +50,14 @@ App accessible at http://localhost:3000
 
 -   [x] Add commit-hooks (Prettier, Jest) with Husky
 -   [ ] Create base models that hook up CRUD agains REST-API
--   [ ] Optimize Bundle Size
+-   [x] Optimize Bundle Size
 -   [x] Add Webpack Analyze tools
 -   [ ] Create a RootStore that has all other Stores as props
 -   [x] Use Fetch instead of Axios
 -   [ ] Check if DevServer port is taken, if so, grab next free
+-   [ ] Add PostCSS loader
 -   [ ] Make Ant Design Optional
 -   [ ] Create a starter script for config
-
 
 ## Contribute
 
