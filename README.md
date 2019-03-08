@@ -53,6 +53,7 @@ App accessible at http://localhost:3000
 -   [ ] Optimize Bundle Size
 -   [ ] Add Webpack Analyze tools
 -   [ ] Create a RootStore that has all other Stores as props
+-   [ ] Use Fetch instead of Axios
 
 ## Contribute
 
