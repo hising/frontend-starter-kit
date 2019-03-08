@@ -58,6 +58,7 @@ App accessible at http://localhost:3000
 -   [ ] Add PostCSS loader
 -   [ ] Make Ant Design Optional
 -   [ ] Create a starter script for config
+-   [ ] Add CircleCI build config
 
 ## Contribute
 
