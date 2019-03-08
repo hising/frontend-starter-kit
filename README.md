@@ -47,6 +47,7 @@ App accessible at http://localhost:3000
 - [ ] Create base models that hook up CRUD agains REST-API
 - [ ] Optimize Bundle Size
 - [ ] Add Webpack Analyze tools
+- [ ] Create a RootStore that has all other Stores as props
 
 ## Contribute
 
