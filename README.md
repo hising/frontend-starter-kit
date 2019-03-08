@@ -54,6 +54,7 @@ App accessible at http://localhost:3000
 -   [ ] Add Webpack Analyze tools
 -   [ ] Create a RootStore that has all other Stores as props
 -   [ ] Use Fetch instead of Axios
+-   [ ] Check if DevServer port is taken, if so, grab next free
 
 ## Contribute
 
