@@ -46,6 +46,7 @@ App accessible at http://localhost:3000
 - [ ] Add commit-hooks (Prettier, Jest) with Husky
 - [ ] Create base models that hook up CRUD agains REST-API
 - [ ] Optimize Bundle Size
+- [ ] Add Webpack Analyze tools
 
 ## Contribute
 
