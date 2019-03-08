@@ -1,15 +1,22 @@
 {
-  "defaultSeverity": "error",
-  "extends": [
-    "tslint:latest"
-  ],
-  "jsRules": {},
-  "rules": {
-    "variable-name": [true, "ban-keywords", "check-format","allow-leading-underscore"],
-    "no-submodule-imports": false
-  },
-  "rulesDirectory": [],
-  "linterOptions": {
-    "exclude": ["**/node_modules/**"]
-  }
+    "defaultSeverity": "error",
+    "extends": ["tslint:latest"],
+    "jsRules": {},
+    "rules": {
+        "variable-name": [
+            true,
+            "ban-keywords",
+            "check-format",
+            "allow-leading-underscore"
+        ],
+        "no-submodule-imports": false,
+        "no-return-await": false,
+        "no-empty": false,
+        "trailing-comma": false,
+        "no-implicit-dependencies": false
+    },
+    "rulesDirectory": [],
+    "linterOptions": {
+        "exclude": ["**/node_modules/**"]
+    }
 }
