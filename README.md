@@ -52,7 +52,7 @@ App accessible at http://localhost:3000
 -   [ ] Create base models that hook up CRUD agains REST-API
 -   [x] Optimize Bundle Size
 -   [x] Add Webpack Analyze tools
--   [ ] Create a RootStore that has all other Stores as props
+-   [x] Create a RootStore that has all other Stores as props
 -   [x] Use Fetch instead of Axios
 -   [ ] Check if DevServer port is taken, if so, grab next free
 -   [x] Add PostCSS loader
