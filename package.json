@@ -6,6 +6,8 @@
     "scripts": {
         "dev": "webpack-dev-server --progress --colors --hot --config webpack.config.js --open --mode=development",
         "build": "webpack --mode=production",
+        "dev:analyze": "webpack-dev-server --progress --colors --hot --config webpack.config.js --open --mode=development  --env.DEBUG=true",
+        "build:analyze": "webpack --mode=production --env.DEBUG=true",
         "prettier": "prettier-check src/**/*.*",
         "check-types": "tsc",
         "lint": "tslint '**/*.ts'",
@@ -63,8 +65,11 @@
         "typescript": "^3.2.4",
         "uglifyjs-webpack-plugin": "^2.1.1",
         "webpack": "^4.29.0",
+        "webpack-bundle-analyzer": "^3.1.0",
         "webpack-cli": "^3.2.1",
-        "webpack-dev-server": "^3.1.14"
+        "webpack-dev-server": "^3.1.14",
+        "webpack-merge": "^4.2.1",
+        "webpack-monitor": "^1.0.14"
     },
     "husky": {
         "hooks": {
