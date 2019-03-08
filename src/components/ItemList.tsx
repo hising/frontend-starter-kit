@@ -1,7 +1,7 @@
-import * as React from "react";
+import List from "antd/lib/list";
 import {observer} from "mobx-react";
+import * as React from "react";
 import {Item, ItemStore} from "../stores/ItemStore";
-import {List} from "antd";
 
 interface IItemListInterface {
     store: ItemStore;
@@ -9,7 +9,7 @@ interface IItemListInterface {
 
 @observer
 class ItemList extends React.Component<IItemListInterface, any> {
-    render() {
+    public render() {
         return (
             <div>
                 <h4>Clicked Items: {this.props.store.clickedItems}</h4>

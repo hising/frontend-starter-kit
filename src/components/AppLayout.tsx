@@ -1,4 +1,6 @@
-import {Icon, Layout, Menu} from "antd";
+import Icon from "antd/lib/icon";
+import Layout from "antd/lib/layout";
+import Menu from "antd/lib/menu";
 import * as React from "react";
 import {Link} from "react-router-dom";
 import {MenuItem} from "../ui/MenuItem";
@@ -14,16 +16,14 @@ export class AppLayout extends React.Component<IAppLayoutProps, any> {
         return (
             <Layout style={{minHeight: "100vh"}}>
                 <Sider collapsible>
-                    <Menu theme="dark">
-                        {this.renderMenuItems()}
-                    </Menu>
+                    <Menu theme="dark">{this.renderMenuItems()}</Menu>
                 </Sider>
                 <Layout>
                     <Content
                         style={{
                             backgroundColor: "#fff",
                             margin: "0",
-                            padding: "16px",
+                            padding: "16px"
                         }}>
                         {this.props.children}
                     </Content>
