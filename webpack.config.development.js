@@ -20,7 +20,12 @@ const config = {
             {test: /\.tsx?$/, loader: "babel-loader"},
             {
                 test: /\.s?css$/,
-                use: ["style-loader", "css-loader", "sass-loader"]
+                use: [
+                    "style-loader",
+                    {loader: "css-loader", options: {importLoaders: 1}},
+                    "postcss-loader",
+                    "sass-loader"
+                ]
             }
         ]
     },
