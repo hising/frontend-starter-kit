@@ -5,7 +5,7 @@ import {hot} from "react-hot-loader/root";
 import {BrowserRouter as Router, Route} from "react-router-dom";
 import {AppLayout} from "./components/AppLayout";
 import * as menuConfig from "./config/menu.json";
-import {AppStore} from "./stores/AppStore";
+import {RootStore} from "./stores/RootStore";
 import {MenuItem} from "./ui/MenuItem";
 import {Account, ForgotPassword, Home, Login, Settings, Signup} from "./views";
 const menuItems = menuConfig.items.map((item: any) => {
@@ -13,7 +13,7 @@ const menuItems = menuConfig.items.map((item: any) => {
 });
 
 interface IAppProps {
-    appStore: AppStore;
+    rootStore: RootStore;
 }
 
 class App extends React.Component<IAppProps, any> {
@@ -24,7 +24,7 @@ class App extends React.Component<IAppProps, any> {
     public render() {
         return (
             <Router>
-                <Provider appStore={this.props.appStore}>
+                <Provider rootStore={this.props.rootStore}>
                     <AppLayout menuItems={menuItems}>
                         <Route path="/" exact component={Home} />
                         <Route path="/account" exact component={Account} />
