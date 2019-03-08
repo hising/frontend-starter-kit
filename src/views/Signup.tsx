@@ -1,15 +1,21 @@
+import {Button, Checkbox, Form, Icon, Input} from "antd";
 import * as React from "react";
-import {Form, Icon, Input, Button, Checkbox} from "antd";
 import {Link} from "react-router-dom";
 
 export class Signup extends React.Component<any, any> {
-    state = {
+    private static handleSubmit(e: any) {
+        e.preventDefault();
+        alert("Signup");
+    }
+
+    public state = {
         confirmDirty: false
     };
-    render() {
+
+    public render() {
         return (
             <div>
-                <Form onSubmit={this.handleSubmit} className="signup-form">
+                <Form onSubmit={Signup.handleSubmit} className="signup-form">
                     <Form.Item>
                         <Input
                             prefix={<Icon type="mail" />}
@@ -63,22 +69,8 @@ export class Signup extends React.Component<any, any> {
         );
     }
 
-    private handleSubmit(e: any) {
-        e.preventDefault();
-        alert("Signup");
-    }
-
     private handleConfirmBlur(e: any) {
         const value = e.target.value;
         this.setState({confirmDirty: this.state.confirmDirty || !!value});
-    }
-
-    private compareToFirstPassword(rule: any, value: any, callback: any) {
-        const form = this.props.form;
-        if (value && value !== form.getFieldValue("password")) {
-            callback("Two passwords that you enter is inconsistent!");
-        } else {
-            callback();
-        }
     }
 }

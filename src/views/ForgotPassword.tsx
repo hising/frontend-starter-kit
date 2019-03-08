@@ -1,11 +1,18 @@
-import * as React from "react";
 import {Button, Form, Icon, Input} from "antd";
+import * as React from "react";
 
 export class ForgotPassword extends React.Component<any, any> {
-    render() {
+    private static handleSubmit(e: any) {
+        e.preventDefault();
+        alert("Remind me");
+    }
+
+    public render() {
         return (
             <div>
-                <Form onSubmit={this.handleSubmit} className="signup-form">
+                <Form
+                    onSubmit={ForgotPassword.handleSubmit}
+                    className="signup-form">
                     <Form.Item>
                         <Input
                             prefix={<Icon type="mail" />}
@@ -27,10 +34,5 @@ export class ForgotPassword extends React.Component<any, any> {
                 </Form>
             </div>
         );
-    }
-
-    private handleSubmit(e: any) {
-        e.preventDefault();
-        alert("Remind me");
     }
 }

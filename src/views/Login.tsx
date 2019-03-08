@@ -1,16 +1,16 @@
-import * as React from "react";
 import {Button, Checkbox, Form, Icon, Input} from "antd";
+import * as React from "react";
 import {Link} from "react-router-dom";
 
 export class Login extends React.Component<any, any> {
-    handleSubmit = (e: any) => {
+    public static handleSubmit(e: any) {
         e.preventDefault();
         alert("sfsdf");
-    };
+    }
 
-    render() {
+    public render() {
         return (
-            <Form onSubmit={this.handleSubmit} className="login-form">
+            <Form onSubmit={Login.handleSubmit} className="login-form">
                 <Form.Item>
                     <Input
                         prefix={<Icon type="user" />}

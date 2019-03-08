@@ -13,7 +13,8 @@
         "no-return-await": false,
         "no-empty": false,
         "trailing-comma": false,
-        "no-implicit-dependencies": false
+        "no-implicit-dependencies": false,
+        "semicolon": true
     },
     "rulesDirectory": [],
     "linterOptions": {
