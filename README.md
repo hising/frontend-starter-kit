@@ -62,6 +62,7 @@ App accessible at http://localhost:3000
 -   [ ] Create a starter script for config
 -   [x] Add CircleCI build config
 -   [x] Add tests (Jest)
+-   [ ] Set up a basic event manager for important user and usage events
 
 ## Contribute
 
