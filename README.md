@@ -61,7 +61,7 @@ App accessible at http://localhost:3000
 -   [ ] Make Ant Design Optional
 -   [ ] Create a starter script for config
 -   [x] Add CircleCI build config
--   [ ] Add tests (Jest)
+-   [x] Add tests (Jest)
 
 ## Contribute
 
