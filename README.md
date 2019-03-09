@@ -2,6 +2,8 @@
 
 **TypeScript, Babel, Webpack, React, Mobx, AntD**
 
+[![CircleCI](https://circleci.com/gh/hising/frontend-starter-kit/tree/master.svg?style=svg)](https://circleci.com/gh/hising/frontend-starter-kit/tree/master)
+
 ## Getting started
 
 -   Clone the repository
