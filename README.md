@@ -50,7 +50,7 @@ App accessible at http://localhost:3000
 
 ## TODO
 
--   [x] Add commit-hooks (Prettier, Jest) with Husky [#1](#1)
+-   [x] Add commit-hooks (Prettier, Jest) with Husky PR#1
 -   [ ] Create base models that hook up CRUD agains REST-API
 -   [x] Optimize Bundle Size #4
 -   [x] Add Webpack Analyze tools #2
