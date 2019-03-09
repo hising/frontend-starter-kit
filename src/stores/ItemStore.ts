@@ -1,5 +1,7 @@
 import {action, computed, observable} from "mobx";
 import {HttpClient} from "../http/client";
+import {BaseStore} from "./BaseStore";
+import {RootStore} from "./RootStore";
 
 export interface Item {
     name: string;
@@ -7,11 +9,12 @@ export interface Item {
     url: string;
 }
 
-export class ItemStore {
+export class ItemStore extends BaseStore {
     @observable public items: Item[] = [];
     private client: HttpClient;
 
-    constructor() {
+    constructor(root: RootStore) {
+        super(root);
         this.client = new HttpClient();
         this.grabItems();
     }
@@ -47,5 +50,3 @@ export class ItemStore {
         }
     }
 }
-
-export const itemStore = new ItemStore();

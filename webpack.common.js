@@ -1,12 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
-const webpackDevServerPort = 3000;
-const webpack = require("webpack");
-const TerserPlugin = require('terser-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-
-const config = {
+module.exports = {
     output: {
         path: path.resolve("dist"),
         filename: "[name].js"
@@ -16,7 +10,7 @@ const config = {
     },
     module: {
         rules: [
-            {test: /\.tsx?$/, loader: "babel-loader"}
+            {test: /\.tsx?$/, loader: "babel-loader"},
         ]
     },
     plugins: [
@@ -24,6 +18,18 @@ const config = {
             template: "./src/index.html"
         })
     ]
+};
+
+/*
+
+
+
+
+
+
+
+const config = {
+
 };
 
 module.exports = (env, argv) => {
@@ -38,27 +44,10 @@ module.exports = (env, argv) => {
             : ["./src/index.ts"];
 
     if (devMode) {
-        config.devServer = {
-            port: webpackDevServerPort,
-            hot: true,
-            headers: {
-                "Access-Control-Allow-Origin": "*"
-            },
-            contentBase: path.join(__dirname, "dist"),
-            compress: true
-        };
+        config.devServer = ;
     } else {
 
-        let pathsToClean = [
-            'dist',
-        ];
 
-        let cleanOptions = {
-            root:     '',
-            exclude:  [],
-            verbose:  true,
-            dry:      false
-        };
 
         config.plugins.push(
             new CleanWebpackPlugin(pathsToClean, cleanOptions),
@@ -126,3 +115,5 @@ module.exports = (env, argv) => {
 
     return config;
 };
+
+*/

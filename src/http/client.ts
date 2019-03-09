@@ -1,5 +1,3 @@
-import axios from "axios";
-
 function serialize(params: any) {
     const str = [];
     for (const paramName in params) {
@@ -11,28 +9,36 @@ function serialize(params: any) {
 }
 
 export class HttpClient {
-    private transport: any;
     private readonly baseURL: string;
 
-    constructor(baseURL: string = "", transport: any = axios) {
-        this.transport = transport;
+    constructor(baseURL: string = "") {
         this.baseURL = baseURL;
     }
 
-    public get(path: string, params: any = null) {
+    public async get(path: string, params: any = null) {
         if (params) {
             path = `${path}?${serialize(params)}`;
         }
-        return this.transport.get(this.getUrl(path));
+        const response = await fetch(this.getUrl(path));
+        return response.json();
     }
 
-    public post(path: string, params: any = {}, headers: any = {}) {
-        return this.transport.post(this.getUrl(path), params, {
+    public async post(path: string, params: any = {}, headers: any = {}) {
+        const response = await fetch(path, {
+            body: JSON.stringify(params),
             headers,
+            method: "post",
         });
+        return response.json();
     }
 
     private getUrl(path: string) {
         return this.baseURL + path;
+    }
+
+    private to(promise: any) {
+        return promise.then((data: any) => {
+            return [null, data];
+        }).catch((err: any) => [err]);
     }
 }

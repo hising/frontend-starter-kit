@@ -26,7 +26,6 @@
     "@types/react-dom": "^16.0.11",
     "@types/react-router-dom": "^4.3.1",
     "antd": "^3.13.0",
-    "axios": "^0.18.0",
     "formik": "^1.4.3",
     "mobx": "^5.9.0",
     "mobx-react": "^5.4.3",
@@ -62,6 +61,7 @@
     "uglifyjs-webpack-plugin": "^2.1.1",
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1",
-    "webpack-dev-server": "^3.1.14"
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.2.1"
   }
 }
