@@ -50,18 +50,18 @@ App accessible at http://localhost:3000
 
 ## TODO
 
--   [x] Add commit-hooks (Prettier, Jest) with Husky
+-   [x] Add commit-hooks (Prettier, Jest) with Husky #1
 -   [ ] Create base models that hook up CRUD agains REST-API
--   [x] Optimize Bundle Size
--   [x] Add Webpack Analyze tools
+-   [x] Optimize Bundle Size #4
+-   [x] Add Webpack Analyze tools #2
 -   [x] Create a RootStore that has all other Stores as props
--   [x] Use Fetch instead of Axios
+-   [x] Use Fetch instead of Axios #3
 -   [ ] Check if DevServer port is taken, if so, grab next free
--   [x] Add PostCSS loader
+-   [x] Add PostCSS loader #5
 -   [ ] Make Ant Design Optional
 -   [ ] Create a starter script for config
 -   [x] Add CircleCI build config
--   [x] Add tests (Jest)
+-   [x] Add tests (Jest) #6
 -   [ ] Set up a basic event manager for important user and usage events
 
 ## Contribute
