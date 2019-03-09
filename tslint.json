@@ -14,7 +14,8 @@
         "no-empty": false,
         "trailing-comma": false,
         "no-implicit-dependencies": false,
-        "semicolon": true
+        "semicolon": true,
+        "no-console": false
     },
     "rulesDirectory": [],
     "linterOptions": {
