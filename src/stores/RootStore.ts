@@ -5,7 +5,7 @@ import {UserStore} from "./UserStore";
 export class RootStore {
     public items: ItemStore;
     public app: AppStore;
-    private user: UserStore;
+    public user: UserStore;
     constructor() {
         this.items = new ItemStore(this);
         this.app = new AppStore(this);

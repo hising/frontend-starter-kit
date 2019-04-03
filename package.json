@@ -4,9 +4,9 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "webpack-dev-server --progress --colors --hot --config webpack.config.js --open --mode=development",
+        "dev": "webpack-dev-server --progress --colors --hot --config webpack.common.js --open --mode=development",
         "build": "webpack --mode=production",
-        "dev:analyze": "webpack-dev-server --progress --colors --hot --config webpack.config.js --open --mode=development  --env.DEBUG=true",
+        "dev:analyze": "webpack-dev-server --progress --colors --hot --config webpack.common.js --open --mode=development  --env.DEBUG=true",
         "build:analyze": "webpack --mode=production --env.DEBUG=true",
         "prettier": "prettier --write src/**/*.*",
         "check-types": "tsc",
@@ -36,7 +36,7 @@
         "mobx-react": "^5.4.3",
         "react": "^16.7.0",
         "react-dom": "^16.7.0",
-        "react-router-dom": "^4.3.1"
+        "react-router-dom": "^5.0.0"
     },
     "devDependencies": {
         "@babel/core": "^7.2.2",
@@ -50,7 +50,7 @@
         "babel-jest": "^24.0.0",
         "babel-loader": "^8.0.5",
         "babel-plugin-import": "^1.11.0",
-        "clean-webpack-plugin": "^1.0.1",
+        "clean-webpack-plugin": "^2.0.1",
         "css-loader": "^2.1.0",
         "cssnano": "^4.1.10",
         "html-webpack-plugin": "^3.2.0",

@@ -9,8 +9,8 @@ const config = {
         "./src/index.ts"
     ],
     output: {
-        path: path.resolve("dist"),
-        filename: "[name].js"
+        filename: "[name].js",
+        path: path.resolve("dist")
     },
     resolve: {
         extensions: [".ts", ".tsx", ".js", ".jsx"]

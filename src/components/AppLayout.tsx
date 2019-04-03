@@ -1,16 +1,20 @@
 import Icon from "antd/lib/icon";
 import Layout from "antd/lib/layout";
 import Menu from "antd/lib/menu";
+import {inject} from "mobx-react";
 import * as React from "react";
 import {Link} from "react-router-dom";
+import {RootStore} from "../stores/RootStore";
 import {MenuItem} from "../ui/MenuItem";
 const {Content, Footer, Sider} = Layout;
 
 interface IAppLayoutProps {
     children: any;
     menuItems: MenuItem[];
+    rootStore: RootStore;
 }
 
+@inject("rootStore")
 export class AppLayout extends React.Component<IAppLayoutProps, any> {
     public render() {
         return (
@@ -25,6 +29,11 @@ export class AppLayout extends React.Component<IAppLayoutProps, any> {
                             margin: "0",
                             padding: "16px"
                         }}>
+                        <div>
+                            UUID: {this.props.rootStore.user.uuid} - CSRF:{" "}
+                            {this.props.rootStore.user.csrf} - Token:{" "}
+                            {this.props.rootStore.user.token}
+                        </div>
                         {this.props.children}
                     </Content>
                     <Footer style={{textAlign: "center"}}>
