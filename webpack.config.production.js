@@ -6,11 +6,7 @@ const webpack = require("webpack");
 const TerserPlugin = require("terser-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 
-const pathsToClean = ["dist"];
-
 const cleanOptions = {
-    root: "",
-    exclude: [],
     verbose: true,
     dry: false
 };
@@ -48,7 +44,7 @@ const config = {
                 NODE_ENV: JSON.stringify("production")
             }
         }),
-        new CleanWebpackPlugin(pathsToClean, cleanOptions),
+        new CleanWebpackPlugin(cleanOptions),
         new webpack.optimize.ModuleConcatenationPlugin(),
         new MiniCssExtractPlugin({
             filename: "[name].[hash].css",
