@@ -4,7 +4,7 @@ const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const path = require("path");
 const webpack = require("webpack");
 const TerserPlugin = require("terser-webpack-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
+const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 
 const cleanOptions = {
     verbose: true,
@@ -45,7 +45,6 @@ const config = {
             }
         }),
         new CleanWebpackPlugin(cleanOptions),
-        new webpack.optimize.ModuleConcatenationPlugin(),
         new MiniCssExtractPlugin({
             filename: "[name].[hash].css",
             chunkFilename: "[id].[hash].css"
