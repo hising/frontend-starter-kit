@@ -12,12 +12,12 @@ const menuItems = menuConfig.items.map((item: any) => {
     return new MenuItem(item.path, item.label, item.icon);
 });
 
-interface IAppProps {
+interface AppProps {
     rootStore: RootStore;
 }
 
-class App extends React.Component<IAppProps, any> {
-    constructor(props: IAppProps) {
+class App extends React.Component<AppProps, any> {
+    constructor(props: AppProps) {
         super(props);
     }
 
