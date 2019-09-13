@@ -6,12 +6,12 @@ import {Link} from "react-router-dom";
 import {MenuItem} from "../ui/MenuItem";
 const {Content, Footer, Sider} = Layout;
 
-interface IAppLayoutProps {
+interface AppLayoutProps {
     children: any;
     menuItems: MenuItem[];
 }
 
-export class AppLayout extends React.Component<IAppLayoutProps, any> {
+export class AppLayout extends React.Component<AppLayoutProps, any> {
     public render() {
         return (
             <Layout style={{minHeight: "100vh"}}>
@@ -28,7 +28,15 @@ export class AppLayout extends React.Component<IAppLayoutProps, any> {
                         {this.props.children}
                     </Content>
                     <Footer style={{textAlign: "center"}}>
-                        Ant Design ©2018 Created by Ant UED
+                        <a
+                            href="https://github.com/hising/frontend-starter-kit"
+                            target="_blank">
+                            <Icon type="github" /> Frontend Starter Kit
+                        </a>{" "}
+                        ©2019 - Created by{" "}
+                        <a href="https://yetric.com" target="_blank">
+                            Yetric AB
+                        </a>
                     </Footer>
                 </Layout>
             </Layout>
