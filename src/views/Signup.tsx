@@ -1,3 +1,4 @@
+import {Modal} from "antd";
 import Button from "antd/lib/button";
 import Checkbox from "antd/lib/checkbox";
 import Form from "antd/lib/form";
@@ -13,7 +14,8 @@ export class Signup extends React.Component<any, any> {
     }
 
     public state = {
-        confirmDirty: false
+        confirmDirty: false,
+        visible: false
     };
 
     public render() {
@@ -54,7 +56,17 @@ export class Signup extends React.Component<any, any> {
                     </Form.Item>
                     <Form.Item>
                         <Checkbox>
-                            I have read the <a href="">agreement</a>
+                            I have read the{" "}
+                            <a
+                                href=""
+                                onClick={(event: any) => {
+                                    event.preventDefault();
+                                    this.setState({
+                                        visible: true
+                                    });
+                                }}>
+                                agreement
+                            </a>
                         </Checkbox>
                     </Form.Item>
                     <Form.Item>
@@ -69,6 +81,23 @@ export class Signup extends React.Component<any, any> {
                         </div>
                     </Form.Item>
                 </Form>
+                <Modal
+                    title="Terms of Service"
+                    visible={this.state.visible}
+                    onCancel={() => {
+                        this.setState({
+                            visible: false
+                        });
+                    }}
+                    onOk={() => {
+                        this.setState({
+                            visible: false
+                        });
+                    }}>
+                    <p>Some contents...</p>
+                    <p>Some contents...</p>
+                    <p>Some contents...</p>
+                </Modal>
             </div>
         );
     }
