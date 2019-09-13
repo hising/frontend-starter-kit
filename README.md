@@ -4,7 +4,7 @@
 
 [![CircleCI](https://circleci.com/gh/hising/frontend-starter-kit/tree/master.svg?style=svg)](https://circleci.com/gh/hising/frontend-starter-kit/tree/master) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![Netlify Status](https://api.netlify.com/api/v1/badges/72a92e64-e7bc-4e8a-ab8c-b3da1183b106/deploy-status)](https://app.netlify.com/sites/frontend-starter-kit/deploys)
 
-[Demo](https://frontend-starter-kit.netlify.com/)
+[Demo](https://frontend-starter-kit.netlify.com/) - [Blog Post](https://yetric.net/frontend-starter-kit)
 
 ## Getting started
 
@@ -68,4 +68,8 @@ App accessible at http://localhost:3000
 
 ## Contribute
 
-Clone repo, do your magic, create a Pull Request
+Clone the repo, do your magic, create a Pull Request
+
+---
+
+More: [Yetric AB](https://yetric.com) - [Yetric Blog](https://yetric.net)
