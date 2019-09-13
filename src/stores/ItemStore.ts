@@ -1,16 +1,10 @@
 import {action, computed, observable} from "mobx";
 import {HttpClient} from "../http/client";
+import {GistItem, GistJsonResponse} from "../models/Gist";
 import {BaseStore} from "./BaseStore";
 import {RootStore} from "./RootStore";
-
-export interface Item {
-    name: string;
-    clicked: boolean;
-    url: string;
-}
-
 export class ItemStore extends BaseStore {
-    @observable public items: Item[] = [];
+    @observable public items: GistItem[] = [];
     private client: HttpClient;
 
     constructor(rootStore: RootStore) {
@@ -24,7 +18,7 @@ export class ItemStore extends BaseStore {
             "https://api.github.com/users/hising/gists"
         );
 
-        this.items = gists.map((gist: any) => {
+        this.items = gists.map((gist: GistJsonResponse) => {
             return {
                 clicked: false,
                 name: gist.id,
@@ -35,12 +29,12 @@ export class ItemStore extends BaseStore {
 
     @computed
     get clickedItems(): number {
-        return this.items.filter((item: any) => item.clicked).length;
+        return this.items.filter((item: GistItem) => item.clicked).length;
     }
 
     @action
-    public clickItem(clickedItem: Item) {
-        const foundItem = this.items.find((item: any) => {
+    public clickItem(clickedItem: GistItem) {
+        const foundItem = this.items.find((item: GistItem) => {
             return item === clickedItem;
         });
 

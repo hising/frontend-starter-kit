@@ -1,14 +1,15 @@
 import List from "antd/lib/list";
 import {observer} from "mobx-react";
 import * as React from "react";
-import {Item, ItemStore} from "../stores/ItemStore";
+import {GistItem} from "../models/Gist";
+import {ItemStore} from "../stores/ItemStore";
 
-interface IItemListInterface {
+interface ItemListInterface {
     store: ItemStore;
 }
 
 @observer
-class ItemList extends React.Component<IItemListInterface, any> {
+class ItemList extends React.Component<ItemListInterface, any> {
     public render() {
         return (
             <div>
@@ -18,7 +19,7 @@ class ItemList extends React.Component<IItemListInterface, any> {
                     footer={<div>Footer</div>}
                     bordered
                     dataSource={this.props.store.items}
-                    renderItem={(item: Item) => (
+                    renderItem={(item: GistItem) => (
                         <List.Item>
                             <List.Item.Meta
                                 title={
@@ -39,7 +40,7 @@ class ItemList extends React.Component<IItemListInterface, any> {
         );
     }
 
-    private handleClick(item: Item, event: any) {
+    private handleClick(item: GistItem, event: any) {
         event.preventDefault();
         this.props.store.clickItem(item);
     }
