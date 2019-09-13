@@ -2,7 +2,9 @@
 
 **TypeScript, Babel, Webpack, React, Mobx, AntD**
 
-[![CircleCI](https://circleci.com/gh/hising/frontend-starter-kit/tree/master.svg?style=svg)](https://circleci.com/gh/hising/frontend-starter-kit/tree/master) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![CircleCI](https://circleci.com/gh/hising/frontend-starter-kit/tree/master.svg?style=svg)](https://circleci.com/gh/hising/frontend-starter-kit/tree/master) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![Netlify Status](https://api.netlify.com/api/v1/badges/72a92e64-e7bc-4e8a-ab8c-b3da1183b106/deploy-status)](https://app.netlify.com/sites/frontend-starter-kit/deploys)
+
+[Demo](https://frontend-starter-kit.netlify.com/)
 
 ## Getting started
 
