@@ -4,8 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "webpack-dev-server --define process.env.NODE_ENV=development --progress --colors --hot --config webpack.config.js --mode=development",
-        "build": "webpack --define process.env.NODE_ENV=production --mode=production",
+        "dev": "webpack-dev-server --progress --colors --hot --config webpack.config.js --mode=development",
+        "build": "webpack --mode=production",
         "dev:analyze": "webpack-dev-server --progress --colors --hot --config webpack.config.js --mode=development  --env.DEBUG=true",
         "build:analyze": "webpack --mode=production --env.DEBUG=true",
         "prettier": "prettier --write src/**/*.*",
