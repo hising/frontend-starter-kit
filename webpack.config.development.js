@@ -41,7 +41,8 @@ const config = {
             "Access-Control-Allow-Origin": "*"
         },
         contentBase: path.join(__dirname, "dist"),
-        compress: true
+        compress: true,
+        historyApiFallback: true
     }
 };
 
