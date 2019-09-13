@@ -54,7 +54,8 @@ const config = {
             cssProcessorPluginOptions: {
                 preset: ["default", {discardComments: {removeAll: true}}]
             }
-        })
+        }),
+        new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
     ],
     optimization: {
         minimize: true,
