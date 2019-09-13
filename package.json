@@ -9,8 +9,7 @@
         "dev:analyze": "webpack-dev-server --progress --colors --hot --config webpack.config.js --mode=development  --env.DEBUG=true",
         "build:analyze": "webpack --mode=production --env.DEBUG=true",
         "prettier": "prettier --write src/**/*.*",
-        "check-types": "tsc",
-        "lint": "tslint '**/*.ts'",
+        "tslint": "tslint '**/*.ts'",
         "test": "jest --passWithNoTests"
     },
     "repository": {
