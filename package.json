@@ -4,9 +4,9 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "webpack-dev-server --progress --colors --hot --config webpack.config.js --open --mode=development",
+        "dev": "webpack-dev-server --progress --colors --hot --config webpack.config.js --mode=development",
         "build": "webpack --mode=production",
-        "dev:analyze": "webpack-dev-server --progress --colors --hot --config webpack.config.js --open --mode=development  --env.DEBUG=true",
+        "dev:analyze": "webpack-dev-server --progress --colors --hot --config webpack.config.js --mode=development  --env.DEBUG=true",
         "build:analyze": "webpack --mode=production --env.DEBUG=true",
         "prettier": "prettier --write src/**/*.*",
         "check-types": "tsc",
