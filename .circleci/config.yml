@@ -25,6 +25,9 @@ jobs:
           name: prettier
           command: npm run prettier
       - run:
+          name: tslint
+          command: npm runt tslint
+      - run:
           name: test
           command: npm test
       - run: # run tests
