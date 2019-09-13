@@ -1,4 +1,8 @@
-import {Button, Checkbox, Form, Icon, Input} from "antd";
+import Button from "antd/lib/button";
+import Checkbox from "antd/lib/checkbox";
+import Form from "antd/lib/form";
+import Icon from "antd/lib/icon";
+import Input from "antd/lib/input";
 import * as React from "react";
 import {Link} from "react-router-dom";
 

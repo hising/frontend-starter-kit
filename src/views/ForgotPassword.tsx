@@ -1,4 +1,7 @@
-import {Button, Form, Icon, Input} from "antd";
+import Button from "antd/lib/button";
+import Form from "antd/lib/form";
+import Icon from "antd/lib/icon";
+import Input from "antd/lib/input";
 import * as React from "react";
 
 export class ForgotPassword extends React.Component<any, any> {
