@@ -21,7 +21,8 @@ export class ItemStore extends BaseStore {
         this.items = gists.map((gist: GistJsonResponse) => {
             return {
                 clicked: false,
-                name: gist.id,
+                id: gist.id,
+                name: gist.description,
                 url: gist.html_url
             };
         });
