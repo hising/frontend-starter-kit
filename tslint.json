@@ -15,7 +15,8 @@
         "trailing-comma": false,
         "no-implicit-dependencies": false,
         "semicolon": true,
-        "no-console": false
+        "no-console": false,
+        "interface-name": [true, "never-prefix"]
     },
     "rulesDirectory": [],
     "linterOptions": {
