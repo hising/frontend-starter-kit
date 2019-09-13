@@ -12,11 +12,11 @@ const cleanOptions = {
 };
 
 const config = {
-    devtool: "source-map",
+    devtool: false,
     entry: ["./src/index.ts"],
     output: {
         path: path.resolve("dist"),
-        filename: "[name].js"
+        filename: "[name].[hash].js"
     },
     resolve: {
         extensions: [".ts", ".tsx", ".js", ".jsx"]
